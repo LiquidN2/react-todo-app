@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+  max-width: 40rem;
+  margin: auto;
+  background-color: #fff;
+  padding: 5rem;
+  border-radius: 0.3rem;
+
+  @include respond(phone) {
+    padding: 1.5rem;
+  }
+}
+
+.ma-top {
+  &-sm {
+    margin-top: 1.5rem;
+  }
+  &-md {
+    margin-top: 3rem;
+
+    @include respond(phone) {
+      margin-top: 1.5rem;
+    }
+  }
+  &-lg {
+    margin-top: 6rem;
+
+    @include respond(phone) {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.ma-bot {
+  &-sm {
+    margin-bottom: 1.5rem;
+  }
+  &-md {
+    margin-bottom: 3rem;
+  }
+  &-lg {
+    margin-bottom: 6rem;
+  }
+}
+
+.ma-right-sm {
+  margin-right: 1.5rem;
+}
+
+.list-group-item {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    // cursor: pointer;
+    background-color: #f8f9fa;
+  }
+
+  &:hover &__label-input {
+    // cursor: pointer;
+    background-color: #f8f9fa;
+  }
+
+  &__checkbox {
+    margin-right: 1rem;
+  }
+
+  &__label {
+    flex-grow: 1;
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  &__label-input {
+    border: none;
+    flex-grow: 1;
+    margin-right: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__label-input--selected {
+    color: #ccc;
+    text-decoration: line-through;
+    font-style: italic;
+  }
+
+  &__remove {
+    cursor: pointer;
+  }
+}
+
+.form-inline--flex-end {
+  justify-content: flex-end;
+}
+
+.form-group {
+  &--inline-extends {
+    flex-grow: 1 !important;
+    margin-right: 2rem;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+.form-control {
+  &--inline-extends {
+    width: 100% !important;
+  }
+}
+
+.form-check--aligned {
+  margin-left: 1.3rem;
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

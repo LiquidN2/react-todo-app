@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.scss';
 
-function App() {
+import FormTodo from './components/FormTodo';
+import TodoList from './components/TodoList';
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+        <i className="fas fa-list" /> To-Do App
+      </h1>
+      <p className="lead ma-top-md">
+        A simple To-do application built with <code>React</code> and{' '}
+        <code>Redux</code>. Data is persisted to <code>localStorage</code>.
+      </p>
+      <FormTodo />
+
+      <TodoList />
     </div>
   );
-}
+};
 
 export default App;
